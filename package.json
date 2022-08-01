@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "Lexxy Official",
+  "author": "Dve",
   "license": "MIT",
   "dependencies": {
     "@adiwajshing/baileys": "^4.0.1",

@@ -1,6 +1,6 @@
 /**
- - Created By Lexxy Official
- - Base Neobot Multi Device
+ - Edited by Dve
+ - Base SmileyBotz Multi Device
  - Silahkan Di Pakai & Kembangkan Fiturnya
 */
 
@@ -31,14 +31,14 @@ const { state, saveState } = useSingleFileAuthState(session)
 let welcome = JSON.parse(fs.readFileSync('./database/welcome.json'));
 
 function title() {
-	  console.log(chalk.bold.blue(figlet.textSync('BOT MD', {
+	  console.log(chalk.bold.blue(figlet.textSync('Smiley Botz', {
 		font: 'Standard',
 		horizontalLayout: 'default',
 		verticalLayout: 'default',
 		width: 80,
 		whitespaceBreak: false
 	})))
-	console.log(chalk.yellow(`\n ${chalk.green('[ Created By Lexxy Official ]')}\n`))
+	console.log(chalk.yellow(`\n ${chalk.green('[ Edited By Dve ]')}\n`))
 }
 /**
 * Uncache if there is file change;
@@ -77,7 +77,7 @@ const connectToWhatsApp = async () => {
             printQRInTerminal: true,
             logger: logg({ level: 'fatal' }),
             auth: state,
-            browser: ["Neobot Multi Device", "Safari", "3.0"]
+            browser: ["SmileyBotz Multi Device", "Safari", "3.0"]
         })
 	title()
         store.bind(conn.ev)
@@ -126,7 +126,7 @@ const connectToWhatsApp = async () => {
                 }
                 if (data.action == "add") {
                   var but = [{buttonId: `/`, buttonText: { displayText: "Welcome" }, type: 1 }, {buttonId: `/infobot`, buttonText: { displayText: "Siapa si aku?" }, type: 1 }]
-				conn.sendMessage(data.id, { caption: `Hallo @${i.split("@")[0]} Selamat Datang Di Grup *${metadata.subject}*\n\nIntro Dulu Yuk Kak\n\n\nNama : \nUmur :\nAskot :\nGender :\n\nSemoga Kamu Betah Di Grup ini, Jangan Lupa Untuk Membaca Dan Mematuhi Rules Yang Ada`, image: {url: pp_user}, buttons: but, footer: `Deskripsi : ${metadata.desc}`, mentions: [i]})
+				conn.sendMessage(data.id, { caption: `Hallo @${i.split("@")[0]} Selamat Datang Di Grup *${metadata.subject}*\n\nIntro Dulu Kak\n\n\nNama : \nUmur :\nAskot :\nGender :\n\nSemoga Kamu Betah Di Grup ini, Jangan Lupa Untuk Membaca Dan Mematuhi Rules Yang Ada`, image: {url: pp_user}, buttons: but, footer: `Deskripsi : ${metadata.desc}`, mentions: [i]})
 		        } else if (data.action == "remove") {
 		          var but = [{buttonId: `/`, buttonText: { displayText: "Bye" }, type: 1 }]
 				conn.sendMessage(data.id, { caption: `Selamat Tinggal @${i.split("@")[0]}\n\nSemoga Harimu Suram\nTetap Putus Asa Jangan Semangat Dan Jadilah Beban Keluarga 🤙🗿`, image: {url: pp_user}, buttons: but, footer: `${metadata.subject}`, mentions: [i]})

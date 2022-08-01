@@ -1,7 +1,7 @@
 {
-  "name": "Neobot-MD",
-  "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/Lexxy24/NEOBOTV4",
+  "name": "SmileyBotz",
+  "description": "whatsapp bot build with nodejs",
+  "repository": "https://github.com/davekgw/NEOBOT",
   "logo": "https://pbs.twimg.com/media/FO7fojOakAAyYgt?format=jpg&name=900x900",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "buildpacks": [
